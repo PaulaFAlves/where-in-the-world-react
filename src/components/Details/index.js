@@ -1,20 +1,23 @@
 import React, { useEffect, useState } from 'react';
-import { IconName } from 'react-icons/wi'
+import { Link } from 'react-router-dom';
 import api from '../../services/api';
+import { FiArrowLeft } from 'react-icons/fi';
 import './styles.css';
 
-import Content from '../../components/Content';
+import Home from '../../pages/Home';
 
-function Home() {
+function Details() {
 	const [data, setData] = useState([]);
 	const [darkMode, setDarkMode] = useState(getInitialMode());
-	
+
 	useEffect(() => {
-		api.get('/all').then(response => {
+		const name = localStorage.getItem('name')
+		api.get(`/name/${name}`).then(response => {
 			setData(response.data)
 			console.log(response.data) 
 		})
 	}, []);
+	
 
 	useEffect(() => {
 		localStorage.setItem('dark', JSON.stringify(darkMode));
@@ -27,8 +30,7 @@ function Home() {
 	}
 
 
-
-	return (
+	return(
 	    <div className={darkMode ? "dark-mode" : "light-mode"}>
 			<nav className="navbar">
 				<div className="title">
@@ -43,12 +45,31 @@ function Home() {
 					</button>
 				</div>
 			</nav>
-			<div className="options">
-				<input type="text" className="options-country" placeholder="Search for a country..." />
-				<input type="text" placeholder="Filter by Region" />
-			</div>
+			<Link to="/">
+				<FiArrowLeft />
+				Voltar para home
+			</Link>
+			<div className="main-content">
+			<ul>
+				<div className="content">
+				{data.map((item, index) => (
+					<li 
+						key={index}
+						>
+							<img src={item.flag} />
+							<div className="content-text">
+								<h2>{item.name}</h2>
+								<p>Population: {item.population}</p>
+								<p>Region: {item.region}</p>
+								<p>Capital: {item.capital}</p>
+							</div>
+					</li>
+				))}
+				</div>
+	    	</ul>
+		</div>
 
-			<Content />
+		
 		
 
 
@@ -56,9 +77,7 @@ function Home() {
 
 
 	    </div>
-
-
 	);
 }
 
-export default Home;
+export default Details;
