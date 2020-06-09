@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import api from '../../services/api';
 import '../../App.css';
 
-import Content from '../../components/Content';
+import Detail from '../../components/Detail';
 
-function Home() {
+function Details() {
 	const [darkMode, setDarkMode] = useState(getInitialMode());
 
 	function getInitialMode() {
@@ -12,11 +12,12 @@ function Home() {
 
 		return savedMode || false;
 	}
+
 	return (
 	    <div>
-			<Content />		
+			<Detail />		
 	    </div>
 	);
 }
 
-export default Home;
+export default Details;

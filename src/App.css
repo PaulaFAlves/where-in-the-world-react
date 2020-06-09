@@ -4,3 +4,239 @@
   box-sizing: border-box;
   font-family: 'Nunito', sans-serif;
 }
+.light-mode {
+	background-color: hsl(0, 0%, 98%);
+	color: hsl(200, 15%, 8%);
+}
+.dark-mode {
+	background-color: hsl(207, 26%, 17%);
+	color: hsl(0, 0%, 100%);
+}
+.dark-mode .navbar {
+	background-color: hsl(209, 23%, 22%) !important;
+}
+.dark-mode button {
+	color: hsl(0, 0%, 98%);
+}
+.dark-mode .options input {
+	background-color: hsl(209, 23%, 22%);
+	color: hsl(0, 0%, 100%);
+}
+.dark-mode .main-content li {
+	background-color: hsl(209, 23%, 22%);
+}
+.dark-mode .detail-main-content li {
+	background-color: hsl(209, 23%, 22%);
+}
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 100px;
+	background-color: hsl(0, 0%, 100%);
+	padding: 0 60px;
+}
+.change-mode-button {
+	border: 0;
+	background-color: transparent;
+	padding: 10px;
+	font-size: 18px;
+}
+.change-mode-button:focus {
+	outline: none;
+}
+.change-mode-button:hover {
+	cursor: pointer;
+}
+.options {
+	margin: 30px 0;
+	display: flex;
+	justify-content: space-around;
+	height: 50px;
+}
+.options input {
+	font-size: 15px;
+	border: 0;
+	border-radius: 5px;
+	background-color: hsl(0, 0%, 100%);
+	padding: 0 30px;
+	color: hsl(209, 23%, 22%);
+}
+.options input:focus {
+	outline: none;
+}
+.options-country {
+	width: 400px;
+}
+.main-content {
+	margin: 0px; 
+}
+.main-content {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.main-content li {
+	list-style: none;
+	width: 280px;
+	height: 500px;
+	background-color: hsl(0, 0%, 100%);
+	margin: 30px;
+	border-radius: 10px;
+}
+.main-content  h2:hover {
+	cursor: pointer;
+}
+.main-content img {
+	width: 100%;
+	height: 250px;
+	object-fit: cover;
+	border-radius: 10px 10px 0 0;
+}
+.content-text a {
+	margin: 30px 0;
+	text-decoration: none;
+	color: hsl(0, 0%, 100%);
+}
+.content-text {
+	margin: 0 40px;
+	line-height: 30px;
+}
+
+/*DETAILS*/
+.detail-main-content {
+	height: 100vh;
+
+}
+.detail-content {
+	margin: auto;
+	padding-top: 20px;
+}
+.detail-row {
+	display: flex;
+	justify-content: center;
+	width: auto;
+	margin: 0px 100px;
+	padding: 50px;
+	background-color: hsl(0, 0%, 100%);
+}
+.detail-row img {
+	width: 500px;
+	height: 300px;
+	object-fit: cover;
+}
+.detail-button-back {
+	margin-left: 100px;
+	margin-top: 50px;
+	width: 200px;
+	height: 40px;
+	border: 0;
+	text-decoration: none;
+	background-color: hsl(209, 23%, 22%);
+}
+.detail-button-back a {
+	text-decoration: none;
+	color: hsl(0, 0%, 98%);
+	font-size: 15px;
+}
+.detail-text {
+	width: 500px;
+	margin: 0 50px;
+	text-decoration: none;
+	color: hsl(0, 0%, 100%);
+	
+}
+.detail-text-row h2 {
+	margin-bottom: 20px;
+}
+.detail-text-row {
+	display: block;
+	width: 50%;
+	margin-top: 50px;
+}
+.detail-text-sub {
+	display: flex;
+	justify-content: center;
+}
+.detail-text-border {
+	margin-top: 40px;
+}
+.detail-text button {
+	background-color: hsl(209, 23%, 22%);
+	border: 0;
+	width: 50px;
+}
+.detail-text button:hover {
+	cursor: pointer;
+}
+
+
+
+@media only screen and (max-width: 400px) {
+/*	.main-content li:first-child {
+		margin-top: 80px; 
+	}*/
+	.options {
+		display: block;
+		margin: 20px;
+	}
+	.options input {
+		height: 40px;
+		margin: 10px 0;
+	}
+	.options-country {
+		width: 80%;
+	}
+	.navbar {
+		padding: 0 10px;
+		height: 70px;
+	}
+	.title {
+		font-size: 12px;
+	}
+	.change-mode-button {
+		font-size: 15px;
+	}
+	.detail-button-back {
+		display: flex;
+		justify-content: center;
+		margin: 20px auto;
+	}
+	.detail-row {
+		margin: 0px 20px;
+		display: block;	
+	}
+	.detail-text {
+		margin: auto;
+	}
+	.detail-text h2 {
+		margin: 10px 0;
+	}
+	.detail-text-row:nth-child(1) {
+		margin-top: 15px;
+	}
+	.detail-text-row:nth-child(2) {
+		margin-top: 0;
+	}
+	.detail-row {
+		padding: 20px;
+	}
+	.detail-row img {
+		width: 100%;
+		height: 200px
+	}
+	.detail-text-sub {
+		display: block;
+		margin: auto;
+		line-height: 20px;
+	}
+	.detail-border-buttons {
+		display: flex;
+	}
+	.detail-border-buttons button {
+		width: auto;
+		margin: 10px 8px;
+	}
+}
