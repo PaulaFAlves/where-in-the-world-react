@@ -3,6 +3,7 @@ import api from '../../services/api';
 import '../../App.css';
 
 function Detail() {
+	
 	const [data, setData] = useState([]);
 	const [dataAll, setDataAll] = useState([]);
 	const [border, setBorder] = useState('');
@@ -10,6 +11,7 @@ function Detail() {
 	const [initial, setInitial] = useState([]);
 
 	useEffect(() => {
+		
 		if (border === '') {
 		api.get('/')
 			.then(response => {

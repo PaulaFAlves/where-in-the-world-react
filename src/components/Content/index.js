@@ -3,12 +3,14 @@ import api from '../../services/api';
 import '../../App.css';
 
 function Content() {
+	
 	const [data, setData] = useState([]);
 	const [countryFiltered, setCountryFilterer] = useState('');
 	const [regionFiltered, setRegionFilterer] = useState('');
 	const [darkMode, setDarkMode] = useState(getInitialMode());
 
 	useEffect(() => {
+	
 		if (countryFiltered === '') {
 			api.get('/')
 				.then(response => {
@@ -93,7 +95,7 @@ function Content() {
 						>
 							<img src={item.flag} />
 							<div className="content-text">
-								<a href='/details'>
+								<a href='/details' onChange={e => e.preventDefault()}>
 									<h2
 										className="content-name"
 										onClick={() => handleChoosenCountry(item.name)}

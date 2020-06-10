@@ -6,7 +6,7 @@ import Details from './pages/Details';
 
 const Routes = () => {
 	return (
-		<BrowserRouter>
+		<BrowserRouter basename='/'>
 			<Route component={Home} path="/" exact />
 			<Route component={Details} path="/details"/>
 		</BrowserRouter>

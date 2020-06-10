@@ -5,6 +5,7 @@ import '../../App.css';
 import Detail from '../../components/Detail';
 
 function Details() {
+	
 	const [darkMode, setDarkMode] = useState(getInitialMode());
 
 	function getInitialMode() {
