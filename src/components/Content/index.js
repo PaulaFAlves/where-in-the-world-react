@@ -9,12 +9,33 @@ function Content() {
 	const [darkMode, setDarkMode] = useState(getInitialMode());
 
 	useEffect(() => {
-		api.get('/')
-			.then(response => {
-				const country = response.data;
-				setData(country)
-			})
-	}, []);
+		if (countryFiltered === '') {
+			api.get('/')
+				.then(response => {
+					const country = response.data;
+					setData(country)
+				})
+			}
+		if (countryFiltered !== '') {
+			let d = countryFiltered.toLowerCase();
+			console.log(d)
+			api.get('/')
+				.then(response => {
+					let country = response.data;
+					country = country.filter(country => {return country.name.toLowerCase() === d})
+					setData(country)
+				})
+			}
+		if (regionFiltered !== '') {
+			console.log(regionFiltered)
+			api.get('/')
+				.then(response => {
+					let country = response.data;
+					country = country.filter(country => {return country.region === regionFiltered})
+					setData(country)
+				})
+			}
+	}, [countryFiltered, regionFiltered]);
 
 	useEffect(() => {
 		localStorage.setItem('dark', JSON.stringify(darkMode));
@@ -24,11 +45,9 @@ function Content() {
 		localStorage.setItem('name', name)
 	}
 
-	async function filterCountry(e) {
-		const country = await e.target.value;
-	}
 	console.log(data)
-	console.log(regionFiltered)
+	// console.log(regionFiltered)
+	console.log(countryFiltered)
 
 	function getInitialMode() {
 		const savedMode = JSON.parse(localStorage.getItem('dark'));
@@ -36,7 +55,6 @@ function Content() {
 		return savedMode || false;
 	}
 	
-
 	return(
 		<div className={darkMode ? "dark-mode" : "light-mode"}>
 			<nav className="navbar">
@@ -53,7 +71,7 @@ function Content() {
 				</div>
 			</nav>
 			<div className="options">
-				<input type="text" className="options-country" placeholder="Search for a country..." value={countryFiltered} onChange={e =>setCountryFilterer(e.target.value)}/>
+				<input type="text" value={countryFiltered} onChange={e => setCountryFilterer(e.target.value)} className="options-country" placeholder="Search for a country..." value={countryFiltered} onChange={e =>setCountryFilterer(e.target.value)}/>
 				<select 
 					placeholder="Filter by Region" 
 					value={regionFiltered}
@@ -62,8 +80,7 @@ function Content() {
 					<option className="content-select-options" value=''>Filter by Region...</option>
 					<option value="Africa">Africa</option>
 					<option value="Asia">Asia</option>
-					<option value="South America">South America</option>
-					<option value="North America">North America</option>
+					<option value="Americas">Americas</option>
 					<option value="Europe">Europe</option>
 					<option value="Oceania">Oceania</option>
 				</select>
