@@ -31,6 +31,10 @@ function Detail() {
 
 	}, [border]);
 
+	useEffect(() => {
+		localStorage.setItem('dark', JSON.stringify(darkMode));
+	}, [darkMode]);
+
 	function handleChoosenCountry(name) {
 		localStorage.setItem('name', name)
 	}

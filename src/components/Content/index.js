@@ -8,8 +8,6 @@ function Content() {
 	const [regionFiltered, setRegionFilterer] = useState('');
 	const [darkMode, setDarkMode] = useState(getInitialMode());
 
-
-
 	useEffect(() => {
 		api.get('/')
 			.then(response => {
@@ -18,17 +16,9 @@ function Content() {
 			})
 	}, []);
 
-	// useEffect(() => {
-
-	// 	api.get('/')
-	// 		.then(response => {
-	// 			const country = response.data.filter(country => {
-	// 				return country.region === regionFiltered
-	// 			})
-	// 			setData(country)
-
-	// 		})
-	// }, [regionFiltered]);
+	useEffect(() => {
+		localStorage.setItem('dark', JSON.stringify(darkMode));
+	}, [darkMode]);
 
 	function handleChoosenCountry(name) {
 		localStorage.setItem('name', name)
@@ -69,7 +59,7 @@ function Content() {
 					value={regionFiltered}
 					type="text" 
 					onChange={e =>setRegionFilterer(e.target.value)}>
-					<option value=''>Filter by Region...</option>
+					<option className="content-select-options" value=''>Filter by Region...</option>
 					<option value="Africa">Africa</option>
 					<option value="Asia">Asia</option>
 					<option value="South America">South America</option>

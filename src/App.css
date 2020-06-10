@@ -22,11 +22,27 @@
 	background-color: hsl(209, 23%, 22%);
 	color: hsl(0, 0%, 100%);
 }
+.dark-mode .main-content h2 {
+	color: hsl(0, 0%, 100%);
+}
 .dark-mode .main-content li {
 	background-color: hsl(209, 23%, 22%);
 }
+.dark-mode .detail-button-back {
+	background-color: hsl(209, 23%, 22%);
+}
+.dark-mode .detail-button-back a {
+	color: hsl(0, 0%, 100%);
+}
 .dark-mode .detail-main-content li {
 	background-color: hsl(209, 23%, 22%);
+}
+.dark-mode .detail-text {
+	color: hsl(0, 0%, 100%);
+}
+.dark-mode .options select {
+	background-color: hsl(209, 23%, 22%);
+	color: hsl(0, 0%, 70%);
 }
 .navbar {
 	display: flex;
@@ -49,13 +65,16 @@
 .change-mode-button:hover {
 	cursor: pointer;
 }
+
+/*CONTENT*/
 .options {
-	margin: 30px 0;
+	margin: 35px;
+	margin-bottom: 0;
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	height: 50px;
 }
-.options input {
+.options-country {
 	font-size: 15px;
 	border: 0;
 	border-radius: 5px;
@@ -69,6 +88,20 @@
 .options-country {
 	width: 400px;
 }
+
+.options select {
+	width: 250px;
+	appearance: none;
+	border: 0;
+	color: hsl(209, 23%, 22%);
+	padding: 0 30px;
+	font-size: 15px;
+}
+
+.options select:focus {
+	outline: none;
+}
+
 .main-content {
 	margin: 0px; 
 }
@@ -78,20 +111,24 @@
 	flex-wrap: wrap;
 	justify-content: center;
 }
+.main-content h2 {
+	color: hsl(209, 23%, 22%);
+	margin: 20px 0;
+}
+.main-content h2:hover {
+	cursor: pointer;
+}
 .main-content li {
 	list-style: none;
 	width: 280px;
-	height: 500px;
+	height: 400px;
 	background-color: hsl(0, 0%, 100%);
 	margin: 30px;
 	border-radius: 10px;
 }
-.main-content  h2:hover {
-	cursor: pointer;
-}
 .main-content img {
 	width: 100%;
-	height: 250px;
+	height: 200px;
 	object-fit: cover;
 	border-radius: 10px 10px 0 0;
 }
@@ -102,7 +139,7 @@
 }
 .content-text {
 	margin: 0 40px;
-	line-height: 30px;
+	line-height: 20px;
 }
 
 /*DETAILS*/
@@ -121,11 +158,13 @@
 	margin: 0px 100px;
 	padding: 50px;
 	background-color: hsl(0, 0%, 100%);
+	border-radius: 10px;
 }
 .detail-row img {
 	width: 500px;
 	height: 300px;
 	object-fit: cover;
+	border-radius: 10px;
 }
 .detail-button-back {
 	margin-left: 100px;
@@ -134,22 +173,24 @@
 	height: 40px;
 	border: 0;
 	text-decoration: none;
-	background-color: hsl(209, 23%, 22%);
+	background-color: hsl(0, 0%, 98%);
 }
 .detail-button-back a {
 	text-decoration: none;
-	color: hsl(0, 0%, 98%);
+	color: hsl(209, 23%, 22%);
 	font-size: 15px;
+	font-weight: 600;
 }
 .detail-text {
 	width: 500px;
 	margin: 0 50px;
 	text-decoration: none;
-	color: hsl(0, 0%, 100%);
+	color: hsl(209, 23%, 22%);;
 	
 }
 .detail-text-row h2 {
 	margin-bottom: 20px;
+	color: hsl(209, 23%, 22%);
 }
 .detail-text-row {
 	display: block;
@@ -164,7 +205,7 @@
 	margin-top: 40px;
 }
 .detail-text button {
-	background-color: hsl(209, 23%, 22%);
+	background-color: transparent;
 	border: 0;
 	width: 50px;
 }
@@ -178,31 +219,39 @@
 /*	.main-content li:first-child {
 		margin-top: 80px; 
 	}*/
-	.options {
-		display: block;
-		margin: 20px;
-	}
-	.options input {
-		height: 40px;
-		margin: 10px 0;
-	}
-	.options-country {
-		width: 80%;
-	}
-	.navbar {
-		padding: 0 10px;
-		height: 70px;
-	}
+
 	.title {
 		font-size: 12px;
 	}
 	.change-mode-button {
 		font-size: 15px;
 	}
+	.options {
+		display: block;
+		height: auto;
+		margin: 20px;
+		margin-bottom: 0;
+	}
+	.options-country, .options select {
+		height: 40px;
+		width: 100%;
+		margin: 10px 0;
+	}
+	.navbar {
+		padding: 0 10px;
+		height: 70px;
+	}
+	.main-content {
+		padding: 0;
+	}
+	.main-content li {
+		height: 350px;
+	}
+
 	.detail-button-back {
 		display: flex;
 		justify-content: center;
-		margin: 20px auto;
+		margin: 25px auto 0 auto;
 	}
 	.detail-row {
 		margin: 0px 20px;
