@@ -1,15 +1,17 @@
 import React from 'react';
-import { Route, BrowserRouter } from 'react-router-dom';
+import { Route, HashRouter, Redirect } from 'react-router-dom';
 
 import Home from './pages/Home';
 import Details from './pages/Details';
 
 const Routes = () => {
 	return (
-		<BrowserRouter basename='/'>
+		<HashRouter>
+			
 			<Route component={Home} path="/" exact />
-			<Route component={Details} path="/details"/>
-		</BrowserRouter>
+			<Route component={Details} path="/details" exact/>
+			
+		</HashRouter>
 	)
 }
 

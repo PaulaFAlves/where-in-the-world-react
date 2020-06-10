@@ -95,7 +95,7 @@ function Content() {
 						>
 							<img src={item.flag} />
 							<div className="content-text">
-								<a href='/details' onChange={e => e.preventDefault()}>
+								<a href='#/details' onChange={e => e.preventDefault()}>
 									<h2
 										className="content-name"
 										onClick={() => handleChoosenCountry(item.name)}
