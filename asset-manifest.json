@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/where-in-the-world-react/static/css/main.54827860.chunk.css",
-    "main.js": "/where-in-the-world-react/static/js/main.3b94da81.chunk.js",
-    "main.js.map": "/where-in-the-world-react/static/js/main.3b94da81.chunk.js.map",
+    "main.js": "/where-in-the-world-react/static/js/main.e53a2537.chunk.js",
+    "main.js.map": "/where-in-the-world-react/static/js/main.e53a2537.chunk.js.map",
     "runtime-main.js": "/where-in-the-world-react/static/js/runtime-main.86ec21e7.js",
     "runtime-main.js.map": "/where-in-the-world-react/static/js/runtime-main.86ec21e7.js.map",
-    "static/js/2.df27581c.chunk.js": "/where-in-the-world-react/static/js/2.df27581c.chunk.js",
-    "static/js/2.df27581c.chunk.js.map": "/where-in-the-world-react/static/js/2.df27581c.chunk.js.map",
+    "static/js/2.6a0ad320.chunk.js": "/where-in-the-world-react/static/js/2.6a0ad320.chunk.js",
+    "static/js/2.6a0ad320.chunk.js.map": "/where-in-the-world-react/static/js/2.6a0ad320.chunk.js.map",
     "index.html": "/where-in-the-world-react/index.html",
-    "precache-manifest.fbdabac14a874267c6b4b343b024a9f4.js": "/where-in-the-world-react/precache-manifest.fbdabac14a874267c6b4b343b024a9f4.js",
+    "precache-manifest.85ba39b2ab057b3dec49081288d304c4.js": "/where-in-the-world-react/precache-manifest.85ba39b2ab057b3dec49081288d304c4.js",
     "service-worker.js": "/where-in-the-world-react/service-worker.js",
     "static/css/main.54827860.chunk.css.map": "/where-in-the-world-react/static/css/main.54827860.chunk.css.map",
-    "static/js/2.df27581c.chunk.js.LICENSE.txt": "/where-in-the-world-react/static/js/2.df27581c.chunk.js.LICENSE.txt"
+    "static/js/2.6a0ad320.chunk.js.LICENSE.txt": "/where-in-the-world-react/static/js/2.6a0ad320.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.86ec21e7.js",
-    "static/js/2.df27581c.chunk.js",
+    "static/js/2.6a0ad320.chunk.js",
     "static/css/main.54827860.chunk.css",
-    "static/js/main.3b94da81.chunk.js"
+    "static/js/main.e53a2537.chunk.js"
   ]
 }

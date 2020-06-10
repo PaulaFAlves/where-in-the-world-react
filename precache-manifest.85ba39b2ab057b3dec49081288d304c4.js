@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0a1245a3bcb8c0fedef6786ce9139de4",
+    "revision": "b3478961f606c4a053faf5bfc646e617",
     "url": "/where-in-the-world-react/index.html"
   },
   {
-    "revision": "ea9b7afc3b3c6dfbe0d1",
+    "revision": "63881f7fccc0f9fbd5e7",
     "url": "/where-in-the-world-react/static/css/main.54827860.chunk.css"
   },
   {
-    "revision": "d24ae140cf029abe4088",
-    "url": "/where-in-the-world-react/static/js/2.df27581c.chunk.js"
+    "revision": "71ebc3501cdd13391b06",
+    "url": "/where-in-the-world-react/static/js/2.6a0ad320.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/where-in-the-world-react/static/js/2.df27581c.chunk.js.LICENSE.txt"
+    "url": "/where-in-the-world-react/static/js/2.6a0ad320.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ea9b7afc3b3c6dfbe0d1",
-    "url": "/where-in-the-world-react/static/js/main.3b94da81.chunk.js"
+    "revision": "63881f7fccc0f9fbd5e7",
+    "url": "/where-in-the-world-react/static/js/main.e53a2537.chunk.js"
   },
   {
     "revision": "bbac1b28d77b78eed355",
