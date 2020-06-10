@@ -75,7 +75,7 @@ function Detail() {
 					</button>
 				</div>
 			</nav>
-			<button className="detail-button-back"><a href="/">Back</a></button>
+			<button className="detail-button-back"><a href="#/">Back</a></button>
 			<div className="detail-main-content">
 				<ul className="detail-content">
 					{data.map((item, index) => (
